@@ -62,12 +62,47 @@
         $myArray = array("Pasta",23,"Orlando");
         echo "<br>";
         echo "<br>";
-        echo count($myArray);
+        echo $myArray[1];
     ?>
-    <p>
-        Apples:<input type="checkbox" name="fruits[]" value="apple">
-        Oranges:<input type="checkbox" name="fruits[]" value="orange">
-        Pears:<input type="checkbox" name="fruits[]" value="pear">
+    <p>  
+        <form method="post" action="index.php">
+            Apples:<input type="checkbox" name="fruits[]" value="apple">
+            Oranges:<input type="checkbox" name="fruits[]" value="orange">
+            Pears:<input type="checkbox" name="fruits[]" value="pear">
+            <button type="submit">guardar</button>
+        </form>
+        <?php 
+            echo $_POST["fruits"][1];
+            $object = array("Pedro"=>"A+","Pam"=>"C+","Kevin"=>"B-");
+            $object["Camila"]="B+";
+            var_dump ($object);
+              
+          
+        ?>
+        <br>
+        <br>
+        <form action="index.php" method="post">
+            <div>
+                <label>Nombre</label><br>
+                <input type="text" name="nom">
+            </div>
+            <div>
+                <label>Nota</label><br>
+                <input type="text" name="nota">
+            </div>
+            <button type="submit">guardar</button>
+        </form>
+        <?php 
+        function guardarNotas(){
+            static $notas = [];
+            $estudiante = array($_POST['nom']=>$_POST['nota']);
+            array_push($notas,$estudiante);
+            var_dump ($notas);
+        }
+        guardarNotas();
+            
+        ?>
+        
 
 </body>
 </html>

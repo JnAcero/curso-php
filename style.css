@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+ul :nth-child(2){
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   font-size: large;
+   font-weight: 600;
+}
+nav{
+    background-color: lightblue;
+   padding:5px 0;
+    border-radius: 5px;
+}
+main{
+    margin: 10px auto;
+}
+
+.card{
+    margin:10px auto ;
+    border: 1px solid black;
+    width: 60vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   border-radius: 10px;
+   padding: 10px 15px;
+}
+form {
+display: flex;
+  width: inherit;
+  height: auto;
+  flex-direction: column;
+  gap:15px;
+}
+form div{
+    width: inherit;
+}
+.form{
+    width:inherit;
+}
+.card .title{
+    background-color: rgba(255, 208, 0, 0.753);
+    margin:0px;
+    border: 1px solid black;
+    width: inherit;
+    padding: 0px;
+}
+button{
+    padding: 5px 13px;
+    font-size: medium;
+}
